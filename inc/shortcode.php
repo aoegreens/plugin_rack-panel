@@ -2,16 +2,16 @@
 
 /**
  * @param device the name of the device to query "e.g. a0201"
- * @param gpio the pin number to query; for raspberry pi, this is the wiringPi number.
+ * @param pin the pin number to query; for raspberry pi, this is the wiringPi number.
  * @return the value of the given gpio on the given device.
  */
 function aoe_read_gpio($device, $gpio) {
 
-    $url = "http://forwarder-1-svc:80/forward";
+    $url = "http://forwarder-1-svc:80/v1/gpio/get";
     
     $data = array();
     $data["device"] = $device;
-    $data["gpio"] = $gpio;
+    $data["pin"] = $gpio;
 
     $url = sprintf("%s?%s", $url, http_build_query($data));
     
