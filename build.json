@@ -1,0 +1,32 @@
+{
+  "clear_build_path" : true,
+  "ebbs_next": [
+    {
+      "build" : "wordpress_plugin",
+      "build_in" : "package",
+      "copy" : [
+        {"../inc/" : "inc/"}
+      ],
+      "config" : {
+        "clear_build_path" : true,
+        "visibility" : "private",
+        "author": "Web Infrastructure",
+        "author_uri": "https://web.infrastructure.tech",
+        "license": "AGPL License",
+        "ebbs_next" : [
+          {
+            "build": "publish",
+            "path": ".",
+            "build_in": ".",
+            "run_when": [
+              "release"
+            ],
+            "config": {
+              "clear_build_path": false
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
