@@ -1,4 +1,4 @@
-<?php namespace aoe
+<?php namespace aoe;
 
 /**
  * @param device the name of the device to query "e.g. a0201"
