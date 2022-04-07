@@ -54,6 +54,12 @@ function aoe_toggle_current_device() {
     $write_arr["device"] = $device->field("controller_name");
     $write_arr["gpio"] = $device->field("gpio_pin");
     aoe_toggle_gpio($write_arr);
-    header("refresh:5;url=https://aoegreens.com/garden-dashboard/");
+    header("refresh:5;url=https://aoegreens.com/devices/");
 }
 add_shortcode('aoe_toggle_current_device',  __NAMESPACE__ . '\\' . 'aoe_toggle_current_device');
+
+function aoe_dumb_bg_image() {
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'single-post-thumbnail' );
+    return "style = \"background-image: url('".$image[0].1"')\"";
+}
+add_shortcode('aoe_dumb_bg_image',  __NAMESPACE__ . '\\' . 'aoe_dumb_bg_image');
