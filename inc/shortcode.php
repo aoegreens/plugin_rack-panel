@@ -1,7 +1,7 @@
 <?php namespace aoe;
 /*
- * This file is a part of the AOEGreens code base.
- * AOEGreens has provided this code to you in the hopes of making sustainable food production a world-wide reality. For more information on our open source software and how to reach us, please visit https://aoegreens.com/about.
+ * This file is a part of the AOE Greens code base.
+ * AOE Greens has provided this code to you in the hopes of making sustainable food production a world-wide reality. For more information on our open source software and how to reach us, please visit https://aoegreens.com/about.
  * Copyright (C) 2022 AOE GREENS LLC and its founders: Taylor Parrish and Séon O'Shannon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -17,7 +17,6 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 
 /**
  * @param device the name of the device to query "e.g. a0201"
